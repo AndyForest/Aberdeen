@@ -1,3 +1,19 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="88" x="260" y="68"></block>
+  <block type="controls_repeat" id="95" inline="true" x="270" y="145">
+    <value name="TIMES">
+      <block type="math_number" id="102">
+        <field name="NUM">10000</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="variables_set" id="121" inline="true">
+        <field name="VAR">x</field>
+        <value name="VALUE">
+          <block type="sensor_spectrometer" id="119">
+            <field name="LIGHT">BLUE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
 </xml>
