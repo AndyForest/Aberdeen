@@ -13,6 +13,28 @@
             <field name="LIGHT">BLUE</field>
           </block>
         </value>
+        <next>
+          <block type="controls_if" id="128" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" id="135" inline="true">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="139">
+                    <field name="VAR">x</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="149">
+                    <field name="NUM">80</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_forward" id="159"></block>
+            </statement>
+          </block>
+        </next>
       </block>
     </statement>
   </block>
