@@ -61,6 +61,9 @@
                                     <field name="NUM">100</field>
                                   </block>
                                 </value>
+                                <next>
+                                  <block type="movement_stop" id="237"></block>
+                                </next>
                               </block>
                             </next>
                           </block>
