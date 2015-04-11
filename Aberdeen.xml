@@ -15,35 +15,62 @@
           </block>
         </value>
         <next>
-          <block type="controls_if" id="128" inline="false">
-            <value name="IF0">
-              <block type="logic_compare" id="135" inline="true">
-                <field name="OP">LT</field>
-                <value name="A">
-                  <block type="variables_get" id="139">
-                    <field name="VAR">x</field>
+          <block type="oled_cleardisplay" id="197">
+            <next>
+              <block type="oled_setcursor" id="206" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="213">
+                    <field name="NUM">0</field>
                   </block>
                 </value>
-                <value name="B">
-                  <block type="math_number" id="149">
-                    <field name="NUM">80</field>
+                <value name="STARTY">
+                  <block type="math_number" id="214">
+                    <field name="NUM">0</field>
                   </block>
                 </value>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="movement_forward" id="159">
                 <next>
-                  <block type="robot_delay" id="167" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="174">
-                        <field name="NUM">100</field>
+                  <block type="oled_drawnumber" id="223" inline="true">
+                    <value name="NUMBER">
+                      <block type="variables_get" id="227">
+                        <field name="VAR">x</field>
                       </block>
                     </value>
+                    <next>
+                      <block type="controls_if" id="128" inline="false">
+                        <value name="IF0">
+                          <block type="logic_compare" id="135" inline="true">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="variables_get" id="139">
+                                <field name="VAR">x</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="149">
+                                <field name="NUM">80</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="movement_forward" id="159">
+                            <next>
+                              <block type="robot_delay" id="167" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="174">
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
